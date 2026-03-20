@@ -37,21 +37,43 @@ public class AdminUserServiceImpl implements AdminUserService {
 
     @Override
     public Boolean updatePassword(Integer loginUserId, String originalPassword, String newPassword) {
+        System.out.println("=== 密码修改调试信息 ===");
+        System.out.println("用户ID: " + loginUserId);
+        System.out.println("原密码: " + originalPassword);
+        System.out.println("新密码: " + newPassword);
+        
         AdminUser adminUser = adminUserMapper.selectByPrimaryKey(loginUserId);
+        System.out.println("查询到的用户: " + (adminUser != null ? adminUser.getLoginUserName() : "null"));
+        
         //当前用户非空才可以进行更改
         if (adminUser != null) {
             String originalPasswordMd5 = MD5Util.MD5Encode(originalPassword, "UTF-8");
             String newPasswordMd5 = MD5Util.MD5Encode(newPassword, "UTF-8");
+            
+            System.out.println("MD5加密后原密码: " + originalPasswordMd5);
+            System.out.println("数据库中密码: " + adminUser.getLoginPassword());
+            System.out.println("密码是否匹配: " + originalPasswordMd5.equals(adminUser.getLoginPassword()));
+            
             //比较原密码是否正确
             if (originalPasswordMd5.equals(adminUser.getLoginPassword())) {
                 //设置新密码并修改
                 adminUser.setLoginPassword(newPasswordMd5);
-                if (adminUserMapper.updateByPrimaryKeySelective(adminUser) > 0) {
-                    //修改成功则返回true
+                System.out.println("准备更新密码...");
+                
+                int updateResult = adminUserMapper.updateByPrimaryKeySelective(adminUser);
+                System.out.println("数据库更新结果: " + updateResult);
+                
+                if (updateResult > 0) {
+                    System.out.println("密码修改成功!");
                     return true;
                 }
+            } else {
+                System.out.println("原密码不匹配!");
             }
+        } else {
+            System.out.println("用户不存在!");
         }
+        System.out.println("密码修改失败!");
         return false;
     }
 
