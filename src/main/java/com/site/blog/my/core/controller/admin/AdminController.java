@@ -50,7 +50,7 @@ public class AdminController {
         Integer linkCount = linkService.getTotalLinks();
         Integer tagCount = tagService.getTotalTags();
         Integer commentCount = commentService.getTotalComments();
-        
+
         System.out.println("=== 后台首页统计数据调试 ===");
         System.out.println("分类数量: " + categoryCount);
         System.out.println("文章数量: " + blogCount);
@@ -58,7 +58,6 @@ public class AdminController {
         System.out.println("标签数量: " + tagCount);
         System.out.println("评论数量: " + commentCount);
         System.out.println("===========================");
-        
         request.setAttribute("categoryCount", categoryCount);
         request.setAttribute("blogCount", blogCount);
         request.setAttribute("linkCount", linkCount);

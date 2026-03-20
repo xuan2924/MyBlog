@@ -186,7 +186,7 @@ public class BlogController {
     public void uploadFileByEditormd(HttpServletRequest request,
                                      HttpServletResponse response,
                                      @RequestParam(name = "editormd-image-file", required = true)
-                                             MultipartFile file) throws IOException, URISyntaxException {
+                                     MultipartFile file) throws IOException, URISyntaxException {
         String fileName = file.getOriginalFilename();
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
         //生成文件名称通用方法
