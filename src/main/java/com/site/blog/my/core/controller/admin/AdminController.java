@@ -43,15 +43,36 @@ public class AdminController {
     @GetMapping({"", "/", "/index", "/index.html"})
     public String index(HttpServletRequest request) {
         request.setAttribute("path", "index");
-        request.setAttribute("categoryCount", categoryService.getTotalCategories());
-        request.setAttribute("blogCount", blogService.getTotalBlogs());
-        request.setAttribute("linkCount", linkService.getTotalLinks());
-        request.setAttribute("tagCount", tagService.getTotalTags());
-        request.setAttribute("commentCount", commentService.getTotalComments());
+        
+        // 调试日志
+        Integer categoryCount = categoryService.getTotalCategories();
+        Integer blogCount = blogService.getTotalBlogs();
+        Integer linkCount = linkService.getTotalLinks();
+        Integer tagCount = tagService.getTotalTags();
+        Integer commentCount = commentService.getTotalComments();
+        
+        System.out.println("=== 后台首页统计数据调试 ===");
+        System.out.println("分类数量: " + categoryCount);
+        System.out.println("文章数量: " + blogCount);
+        System.out.println("链接数量: " + linkCount);
+        System.out.println("标签数量: " + tagCount);
+        System.out.println("评论数量: " + commentCount);
+        System.out.println("===========================");
+        
+        request.setAttribute("categoryCount", categoryCount);
+        request.setAttribute("blogCount", blogCount);
+        request.setAttribute("linkCount", linkCount);
+        request.setAttribute("tagCount", tagCount);
+        request.setAttribute("commentCount", commentCount);
         return "admin/index";
     }
 
     @PostMapping(value = "/login")
+    /*
+    @PostMapping - 处理POST请求，对应login.html中的form提交
+    @RequestParam - 从请求参数中获取值
+    @SessionAttribute - 从session中获取值
+     */
     public String login(@RequestParam("userName") String userName,
                         @RequestParam("password") String password,
                         @RequestParam("verifyCode") String verifyCode,

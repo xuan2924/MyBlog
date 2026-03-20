@@ -1,0 +1,14 @@
+2026-03-20 14:54:14 [main] INFO  c.s.blog.my.core.MyBlogApplication - Starting MyBlogApplication using Java 25.0.1 on LAPTOP-4HMCD4BE with PID 23188 (D:\JavaProject\MyBlog\My-Blog\target\classes started by jiangnanxuan in D:\JavaProject\MyBlog\My-Blog)
+2026-03-20 14:54:14 [main] DEBUG c.s.blog.my.core.MyBlogApplication - Running with Spring Boot v2.7.5, Spring v5.3.23
+2026-03-20 14:54:14 [main] INFO  c.s.blog.my.core.MyBlogApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-20 14:54:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28083 (http)
+2026-03-20 14:54:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 14:54:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2026-03-20 14:54:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-20 14:54:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1518 ms
+2026-03-20 14:54:17 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-20 14:54:17 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 56 mappings in 'requestMappingHandlerMapping'
+2026-03-20 14:54:17 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /upload/**] in 'resourceHandlerMapping'
+2026-03-20 14:54:17 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-20 14:54:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28083 (http) with context path ''
+2026-03-20 14:54:17 [main] INFO  c.s.blog.my.core.MyBlogApplication - Started MyBlogApplication in 3.174 seconds (JVM running for 3.642)

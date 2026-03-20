@@ -16,8 +16,18 @@ public class AdminUserServiceImpl implements AdminUserService {
 
     @Override
     public AdminUser login(String userName, String password) {
+        System.out.println("=== Service层登录调试 ===");
+        System.out.println("Service - 接收到的用户名: " + userName);
         String passwordMd5 = MD5Util.MD5Encode(password, "UTF-8");
-        return adminUserMapper.login(userName, passwordMd5);
+        System.out.println("Service - MD5加密后的密码: " + passwordMd5);
+        System.out.println("Service - 开始调用Mapper查询数据库");
+        AdminUser result = adminUserMapper.login(userName, passwordMd5);
+        System.out.println("Service - Mapper查询结果: " + (result != null ? "找到用户" : "未找到用户"));
+        if (result != null) {
+            System.out.println("Service - 用户详情 - ID:" + result.getAdminUserId() + ", 昵称:" + result.getNickName());
+        }
+        System.out.println("=== Service层调试结束 ===");
+        return result;
     }
 
     @Override
