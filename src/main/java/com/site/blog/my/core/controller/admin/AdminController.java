@@ -56,27 +56,44 @@ public class AdminController {
                         @RequestParam("password") String password,
                         @RequestParam("verifyCode") String verifyCode,
                         HttpSession session) {
+        System.out.println("=== 登录请求调试信息 ===");
+        System.out.println("用户名: " + userName);
+        System.out.println("密码是否为空: " + (password == null || password.isEmpty()));
+        System.out.println("验证码: " + verifyCode);
+        
         if (!StringUtils.hasText(verifyCode)) {
+            System.out.println("调试: 验证码为空");
             session.setAttribute("errorMsg", "验证码不能为空");
             return "admin/login";
         }
         if (!StringUtils.hasText(userName) || !StringUtils.hasText(password)) {
+            System.out.println("调试: 用户名或密码为空");
             session.setAttribute("errorMsg", "用户名或密码不能为空");
             return "admin/login";
         }
         ShearCaptcha shearCaptcha = (ShearCaptcha) session.getAttribute("verifyCode");
+        System.out.println("调试: Session中的验证码对象: " + (shearCaptcha != null ? "存在" : "不存在"));
+
         if (shearCaptcha == null || !shearCaptcha.verify(verifyCode)) {
+            System.out.println("调试: 验证码验证失败");
             session.setAttribute("errorMsg", "验证码错误");
             return "admin/login";
         }
+
+        System.out.println("调试: 开始调用Service层登录验证");
         AdminUser adminUser = adminUserService.login(userName, password);
+        System.out.println("调试: Service返回结果: " + (adminUser != null ? "登录成功" : "登录失败"));
+
         if (adminUser != null) {
+            System.out.println("调试: 用户信息 - ID:" + adminUser.getAdminUserId() + ", 昵称:" + adminUser.getNickName());
             session.setAttribute("loginUser", adminUser.getNickName());
             session.setAttribute("loginUserId", adminUser.getAdminUserId());
             //session过期时间设置为7200秒 即两小时
             //session.setMaxInactiveInterval(60 * 60 * 2);
+            System.out.println("调试: 登录成功，跳转到后台首页");
             return "redirect:/admin/index";
         } else {
+            System.out.println("调试: 登录失败，返回登录页");
             session.setAttribute("errorMsg", "登陆失败");
             return "admin/login";
         }
