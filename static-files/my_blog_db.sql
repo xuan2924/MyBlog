@@ -226,25 +226,38 @@ CREATE TABLE `tb_link` (
 
 /*Data for the table `tb_link` */
 
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (1,0,'tqr','rqwe','rqw',0,1,'2018-10-22 18:57:52');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (2,2,'十三的GitHub','https://github.com/ZHENFENG13','十三分享代码的地方',1,0,'2018-10-22 19:41:04');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (3,2,'十三的博客','http://13blog.site','个人独立博客13blog',14,0,'2018-10-22 19:53:34');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (4,1,'CSDN 图文课','https://gitchat.csdn.net','IT优质内容平台',6,0,'2018-10-22 19:55:55');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (5,2,'十三的博客园','https://www.cnblogs.com/han-1034683568','最开始写博客的地方',17,0,'2018-10-22 19:56:14');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (6,1,'CSDN','https://www.csdn.net/','CSDN-专业IT技术社区官网',4,0,'2018-10-22 19:56:47');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (7,0,'梁桂钊的博客','http://blog.720ui.com','后端攻城狮',1,0,'2018-10-22 20:01:38');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (8,0,'猿天地','http://cxytiandi.com','一个综合性的网站,以程序猿用户为主,提供各种开发相关的内容',12,0,'2018-10-22 20:02:41');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (9,0,'Giraffe Home','https://yemengying.com/','Giraffe Home',0,0,'2018-10-22 20:27:04');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (10,0,'纯洁的微笑','http://www.ityouknow.com','分享技术，分享生活',3,0,'2018-10-22 20:27:16');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (11,0,'afsdf','http://localhost:28080/admin/links','fad',0,1,'2018-10-22 20:27:26');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (12,1,'afsdf','http://localhost','fad1',0,1,'2018-10-24 14:04:18');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (13,0,'郭赵晖','http://guozh.net/','老郭三分地',0,0,'2019-04-24 15:30:19');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (14,0,'dalaoyang','https://www.dalaoyang.cn/','dalaoyang',0,0,'2019-04-24 15:31:50');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (15,0,'mushblog','https://www.sansani.cn','穆世明博客',0,0,'2019-04-24 15:32:19');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (16,1,'实验楼','https://www.shiyanlou.com/','一家专注于IT技术的在线实训平台',17,0,'2019-04-24 16:03:48');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (17,2,'《SSM 搭建精美实用的管理系统》','https://gitbook.cn/gitchat/column/5b4dae389bcda53d07056bc9','Spring+SpringMVC+MyBatis实战课程',18,0,'2019-04-24 16:06:52');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (18,2,'《Spring Boot 入门及前后端分离项目实践》','https://www.shiyanlou.com/courses/1244','SpringBoot实战课程',19,0,'2019-04-24 16:07:27');
-insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (19,2,'《玩转Spring Boot 系列》','https://www.shiyanlou.com/courses/1274','SpringBoot实战课程',20,0,'2019-04-24 16:10:30');
+-- 基础与路线图
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (1,0,'Java 学习路线图','https://roadmap.sh/java','全球开发者公认的职业技能路径图',1,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (2,1,'JavaGuide 面试/进阶指南','https://javaguide.cn','非常详实的 Java 核心知识点总结',2,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (3,1,'廖雪峰 Java 教程','https://www.liaoxuefeng.com/wiki/1252599548343744','最适合零基础入门的文字教程，通俗易懂',3,0,NOW());
+
+-- 核心原理与算法 (帮你理解发动机)
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (4,2,'Hello 算法','https://www.hello-algo.com/','动画图解数据结构与算法，小白也能看懂',4,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (5,2,'Baeldung (英文)','https://www.baeldung.com/','学习 Spring 生态最权威、简洁的案例网站',5,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (6,1,'深入理解 Java 虚拟机','https://book.douban.com/subject/34907497/','JVM 领域的圣经，虽然是书，但开发者必知',6,0,NOW());
+
+-- Spring 生态 (MyBlog 的核心)
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (7,0,'Spring 官方实战指南','https://spring.io/guides','官方提供的 15 分钟入门系列小例子',7,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (8,0,'MyBatis 官方文档','https://mybatis.org/mybatis-3/zh/index.html','学习 Mapper 层 SQL 映射的最佳文档',8,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (9,2,'程序员二哥的博客','https://paicoding.com','一个开源的实战项目，社区氛围好',9,0,NOW());
+
+-- 前端基础 (帮你理解 Controller 如何交互)
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (10,1,'MDN Web 文档','https://developer.mozilla.org/zh-CN/','前端 HTML/CSS/JS 的权威百科全书',10,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (11,1,'Vue.js 官方文档','https://cn.vuejs.org/','最适合 Java 开发者上手的现代前端框架',11,0,NOW());
+
+-- 社区与视野
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (12,1,'掘金后端专栏','https://juejin.cn/backend','国内质量较高的技术分享社区',12,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (13,1,'InfoQ 技术周报','https://www.infoq.cn/','了解大厂都在用什么技术的窗口',13,0,NOW());
+
+-- 常用辅助工具 (开发提效)
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (14,0,'JSON 格式化工具','https://www.bejson.com/','前后端联调时观察数据必备',14,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (15,0,'菜鸟教程 SQL 版','https://www.runoob.com/sql/sql-tutorial.html','快速回顾 SQL 语法的好地方',15,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (16,0,'Git 指令速查表','https://git-scm.com/book/zh/v2','搞定克隆、提交、推送到 GitHub',16,0,NOW());
+
+-- 进阶推荐
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (17,2,'架构师之路','https://mp.weixin.qq.com/s/7_3PntL_I8e_6m0x','学习如何设计高并发、高性能系统',17,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (18,2,'大厂技术博客汇总','https://github.com/all-companies-tech-blog','美团、阿里、字节的技术博客集锦',18,0,NOW());
+insert  into `tb_link`(`link_id`,`link_type`,`link_name`,`link_url`,`link_description`,`link_rank`,`is_deleted`,`create_time`) values (19,2,'阮一峰的网络日志','http://www.ruanyifeng.com/blog/','博大精深，帮你理解互联网技术的本质',19,0,NOW());
 
 /*Table structure for table `tb_test` */
 
